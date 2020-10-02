@@ -27,6 +27,7 @@ end.reduce({}) do |dict, (year, entry)|
 end
 
 writepage 'archives.html', %Q[
+<title>YJ Archives</title>
 <div class='content'>
 
 <h1>Archives</h1>
@@ -42,6 +43,7 @@ writepage 'archives.html', %Q[
 ]
 
 writepage 'index.html', %Q{
+<title>The Yellow Journal</title>
 <div class='content'>
 
 <h1>The Yellow Journal</h1>
@@ -60,6 +62,7 @@ writepage 'index.html', %Q{
 }
 
 writepage 'about.html', %Q{
+<title>About YJ</title>
 <div class='content'>
 
 <h1>About</h1>
@@ -80,6 +83,8 @@ writepage 'about.html', %Q{
 }
 
 writepage 'reader.html', %q{
+<title>YJ Reader</title>
+
 <h1 id='status' class='center'>nothing to see here</h1>
 <a class='left but' href='javascript:void(0)' onclick='prev()'>«</a>
 <img id='view' class='center' src='logo.png'>
