@@ -103,7 +103,7 @@ const move = offset => () => {
 	const newpage = Math.max(1, Math.min(end, curr + offset))
 	if (newpage === curr && offset !== 0)
 		return
-	history.replaceState({}, '', `?id=${season.toLowerCase()}${year}:${totalpages}:${newpage}`)
+	history.replaceState({}, '', `?id=${season}${year}:${totalpages}:${newpage}`)
 	display(newpage)
 }
 
@@ -114,7 +114,7 @@ const next = move(+1)
 const display = pageno => {
 	if (!season)
 		return
-	VIEW.src = `sem/${year}/${season}/${pageno}.jpg`
+	VIEW.src = `sem/${year}/${season.toLowerCase()}/${pageno}.jpg`
 	STATUS.innerText = `${season} ${year} (${pageno}/${end})`
 	curr = pageno
 }
