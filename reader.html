@@ -29,7 +29,7 @@ const move = offset => () => {
 	const newpage = Math.max(1, Math.min(end, curr + offset))
 	if (newpage === curr && offset !== 0)
 		return
-	history.replaceState({}, '', `?id=${season}${year}:${totalpages}:${newpage}`)
+	history.replaceState({}, '', `?id=${season.toLowerCase()}${year}:${totalpages}:${newpage}`)
 	display(newpage)
 }
 
