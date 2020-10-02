@@ -31,11 +31,11 @@ writepage 'archives.html', %Q[
 <div class='content'>
 
 <h1>Archives</h1>
-<p>read issues</p>
+<p>Here you can read YJ archives!</p>
 
 <ul>
 #{years.map{ |year, seasons|
-	"<li>#{year}<ul>#{seasons.map{|season, pages| "<li><a href='reader.html?id=#{season}#{year}:#{pages}:1'>#{season}</a></li>"}.join ''}</ul></li>"
+	"<li>#{year}<ul>#{seasons.map{|season, pages| "<li><a href='reader.html?id=#{season.capitalize}#{year}:#{pages}:1'>#{season.capitalize}</a></li>"}.join ''}</ul></li>"
 }.join ''}
 </ul>
 
