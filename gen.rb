@@ -24,7 +24,7 @@ end.reduce({}) do |dict, (year, entry)|
 	dict[year] = [] if !dict[year]
 	dict[year].push entry
 	dict
-end
+end.sort_by{ |year, _| -year }.reverse
 
 writepage 'archives.html', %Q[
 <title>YJ Archives</title>
